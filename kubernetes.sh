@@ -7,7 +7,7 @@ net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
 
-yum install docker 
+yum install docker -y
 mkdir -p $HOME/.kube
 systemctl enable docker 
 
