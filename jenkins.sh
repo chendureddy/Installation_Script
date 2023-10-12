@@ -33,5 +33,8 @@ sudo yum upgrade -y
 # Add required dependencies for the jenkins package
 sudo yum install java-17-openjdk
 sudo yum install jenkins -y
+sudo systemctl start jenkins
+sudo systemctl enable jenkins
+sudo systemctl status jenkins
 sudo systemctl daemon-reload
 cat /var/lib/jenkins/secrets/initialAdminPassword
