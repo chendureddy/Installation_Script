@@ -42,13 +42,17 @@ kubectl get po --all-namespaces
 
 alias k=kubectl
 
- curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/canal.yaml -O
+k get nodes
 
- kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml 
+k get po --all-namespaces
 
- kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml 
+curl https://raw.githubusercontent.com/projectcalico/calico/v3.24.5/manifests/canal.yaml -O
 
- k get no
+kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml 
 
- k get po
+kubectl apply -f https://docs.projectcalico.org/v3.9/manifests/calico.yaml 
+
+k get no
+
+k get po
  
