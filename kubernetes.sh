@@ -10,8 +10,8 @@ EOF
 yum install docker -y
 mkdir -p $HOME/.kube
 systemctl enable docker 
-
 systemctl start docker 
+systemctl status docker
 
 cat <<EOF > /etc/yum.repos.d/kubernetes.repo
 [kubernetes]
